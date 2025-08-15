@@ -67,10 +67,98 @@ body {
     position: relative;
     color: white;
     padding: 120px 0;
-    text-align: center;
     min-height: 100vh;
     display: flex;
     align-items: center;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-left {
+    text-align: left;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255,255,255,0.3);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+}
+
+.floating-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.floating-icons i {
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-icons .fa-aws {
+    top: 10%;
+    right: 10%;
+    animation-delay: 0s;
+}
+
+.floating-icons .fa-microsoft {
+    bottom: 20%;
+    right: 5%;
+    animation-delay: 1.5s;
+}
+
+.floating-icons .fa-google {
+    top: 20%;
+    left: 5%;
+    animation-delay: 3s;
+}
+
+.floating-icons .fa-robot {
+    bottom: 10%;
+    left: 15%;
+    animation-delay: 4.5s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
 }
 
 .ai-badge {
@@ -603,8 +691,164 @@ footer {
     padding: 30px 0;
 }
 
+/* Achievements Section */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.achievement-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.achievement-card h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.service-header i {
+    font-size: 2rem;
+    color: #667eea;
+    margin-right: 15px;
+}
+
+.service-header h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-card li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #666;
+}
+
+.service-card li:last-child {
+    border-bottom: none;
+}
+
+.service-card li::before {
+    content: '✓';
+    color: #667eea;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Testimonials Section */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.testimonial-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.testimonial-content {
+    margin-bottom: 20px;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.9);
+}
+
+.testimonial-author h4 {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.testimonial-author span {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-left {
+        text-align: center;
+        order: 2;
+    }
+    
+    .hero-right {
+        order: 1;
+    }
+    
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+    
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -616,6 +860,12 @@ footer {
     .contact-info {
         flex-direction: column;
         gap: 15px;
+        justify-content: center;
+    }
+    
+    .floating-icons i {
+        font-size: 1.5rem;
+        padding: 10px;
     }
     
     .navbar ul {
@@ -665,6 +915,12 @@ footer {
     
     .tech-stack {
         justify-content: center;
+    }
+    
+    .achievements-grid,
+    .services-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
     }
     
     .contact-buttons {
