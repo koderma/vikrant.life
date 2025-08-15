@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Cloud Security - Vikrant Kumar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">Vikrant Kumar</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">← Back to Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="post-detail">
+        <header class="post-header">
+            <div class="container">
+                <div class="post-category">Security</div>
+                <h1>Multi-Cloud Security: Zero Trust Architecture</h1>
+                <div class="post-meta">
+                    <span><i class="fas fa-calendar"></i> December 10, 2024</span>
+                    <span><i class="fas fa-clock"></i> 6 min read</span>
+                    <span><i class="fas fa-user"></i> Vikrant Kumar</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="post-content-wrapper">
+            <div class="container">
+                <div class="post-body">
+                    <p class="lead">Implementing robust security frameworks across AWS, Azure, and GCP requires a fundamental shift from perimeter-based security to Zero Trust Architecture. Here's how I've secured enterprise workloads for Fortune 500 companies.</p>
+
+                    <h2>The Multi-Cloud Security Challenge</h2>
+                    <p>Managing security across multiple cloud providers introduces complexity that traditional security models can't handle. Each cloud platform has unique security services, compliance requirements, and operational models.</p>
+
+                    <h3>Key Security Challenges:</h3>
+                    <ul>
+                        <li><strong>Identity Management:</strong> Unified access control across AWS IAM, Azure AD, and GCP IAM</li>
+                        <li><strong>Network Security:</strong> Consistent firewall rules and network segmentation</li>
+                        <li><strong>Data Protection:</strong> Encryption at rest and in transit across platforms</li>
+                        <li><strong>Compliance:</strong> Meeting GDPR, HIPAA, and ISO standards uniformly</li>
+                    </ul>
+
+                    <h2>Zero Trust Implementation Framework</h2>
+                    <p>Zero Trust assumes no implicit trust and continuously validates every transaction. My framework includes:</p>
+
+                    <ol>
+                        <li><strong>Identity Verification:</strong> Multi-factor authentication and privileged access management</li>
+                        <li><strong>Device Security:</strong> Endpoint protection and device compliance</li>
+                        <li><strong>Network Segmentation:</strong> Micro-segmentation and software-defined perimeters</li>
+                        <li><strong>Application Security:</strong> API security and runtime protection</li>
+                    </ol>
+
+                    <h2>Real-World Implementation: Hero MotoCorp</h2>
+                    <p>During Hero MotoCorp's Azure migration, we implemented a comprehensive Zero Trust architecture:</p>
+
+                    <blockquote>
+                        <p>"Achieved 99.9% security compliance across all migrated workloads while reducing security incidents by 75%."</p>
+                    </blockquote>
+
+                    <h3>Technical Implementation:</h3>
+                    <ul>
+                        <li>Azure Sentinel for SIEM integration</li>
+                        <li>Conditional Access policies for dynamic risk assessment</li>
+                        <li>Azure Key Vault for secrets management</li>
+                        <li>Network Security Groups with micro-segmentation</li>
+                    </ul>
+
+                    <h2>Best Practices for Multi-Cloud Security</h2>
+                    <p>Based on my experience securing enterprise workloads:</p>
+
+                    <h3>1. Centralized Identity Management</h3>
+                    <p>Implement a single identity provider that federates with all cloud platforms. Use SAML/OIDC for seamless authentication.</p>
+
+                    <h3>2. Automated Compliance Monitoring</h3>
+                    <p>Deploy tools like AWS Config, Azure Policy, and GCP Security Command Center for continuous compliance validation.</p>
+
+                    <h3>3. Encryption Everywhere</h3>
+                    <p>Ensure data is encrypted at rest, in transit, and in processing across all cloud environments.</p>
+
+                    <div class="post-footer">
+                        <div class="author-bio">
+                            <h4>About the Author</h4>
+                            <p>Vikrant Kumar specializes in multi-cloud security architecture with extensive experience in Zero Trust implementations across enterprise environments.</p>
+                        </div>
+                        
+                        <div class="post-actions">
+                            <a href="blog.html" class="btn btn-primary">← Back to Blog</a>
+                            <a href="index.html#contact" class="btn btn-secondary">Discuss Security</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Vikrant Kumar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
